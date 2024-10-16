@@ -1,0 +1,16 @@
+{
+  "name": "hobo_hub-rd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "homepage": "https://softcorp-industries.github.io/hobo_hub_rd",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gh-pages": "^6.2.0"
+  }
+}
