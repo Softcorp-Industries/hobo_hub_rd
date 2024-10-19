@@ -1,0 +1,482 @@
+.navMenu {
+  z-index: 5;
+  position: absolute;
+  cursor: pointer;
+  content: "";
+  width: 50px;
+  height: 50px;
+  top: 2.5em;
+  left: 0.5em;
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  &__btn {
+    content: "";
+    height: 4px;
+    width: 35px;
+    border-radius: 25%;
+    background-color: #996633;
+  }
+  &__btn-top,
+  &__btn-bottom {
+    content: "";
+    border-radius: 25%;
+    background-color: #996633;
+  }
+  &__btn-top {
+    width: 30px;
+    height: 3px;
+    margin-bottom: 3px;
+  }
+  &__btn-bottom {
+    height: 5px;
+    width: 40px;
+    margin-top: 4px;
+  }
+  &__btn:before,
+  &__btn:after {
+    z-index: 5;
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: 3px;
+    height: 2px;
+    min-width: 30px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+  }
+  &__btn::before {
+    margin-left: -8px;
+    transform: rotate(-80deg);
+  }
+  &__btn::after {
+    margin-left: 13px;
+    transform: rotate(80deg);
+  }
+}
+.navList {
+  position: absolute;
+  z-index: 5;
+  top: 6.6em;
+  left: -250px;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--darkModeBg2);
+  ul {
+    padding: 0.5em 1em;
+    list-style: none;
+    text-align: left;
+    box-shadow: 0 0 3px 1px rgb(90, 90, 90);
+    li {
+      margin-bottom: 0.75em;
+      a {
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        font-family: "Roboto";
+        padding: 0.5em 0.25em;
+        text-decoration: none;
+        color: var(--darkModeTxt);
+        span {
+          font-family: "Titan One";
+          font-weight: 700;
+          color: red;
+        }
+      }
+      a:hover {
+        color: steelblue;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+#darkMode {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  top: 7.25em;
+  right: 1em;
+  z-index: 10;
+  transition: all 750ms;
+  p {
+    color: var(--darkModeTxt);
+    padding-top: 5px;
+    font-family: "Roboto";
+    font-size: .7em;
+  }
+}
+#darkMode.darkModeShow {
+  opacity: 1;
+  transform: scale(1);
+}
+.darkMode {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 70px;
+  height: 35px;
+  background-color: var(--darkModeBg2);
+  border-radius: 1.2rem;
+  box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(#000, 0.4);
+  &__btn {
+    display: block;
+    cursor: pointer;
+    content: "";
+    min-width: 28px;
+    min-height: 28px;
+    margin-left: 3px;
+    border-radius: 50%;
+    border: none;
+    background-color: whitesmoke;
+    background-image: url("/assets/icons/darkMode-icon.png");
+    background-size: contain;
+    background-position: center;
+  }
+}
+.darkMode__btn.darkModeAnim {
+  animation: dmAnim 500ms ease-in-out forwards;
+}
+.darkMode__btn.darkModeAnimRev {
+  animation: dmAnimRev 500ms ease-in-out forwards;
+}
+
+@keyframes dmAnim {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(35px);
+  }
+}
+@keyframes dmAnimRev {
+  0% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.hubNav {
+  margin: 2.5em auto;
+  height: 325px;
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin-bottom: 5em;
+}
+#lunchboxIcon {
+  top: 1.5em;
+  left: 1.5em;
+}
+#sallysIcon {
+  top: -2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#timsIcon {
+  bottom: 1.5em;
+  left: 1.5em;
+}
+#tinasIcon {
+  top: 1.5em;
+  right: 1.5em;
+}
+#feelgoodIcon {
+  bottom: -2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#legalIcon {
+  bottom: 1.5em;
+  right: 1.5em;
+}
+.hubLink {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em 0;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  letter-spacing: 1px;
+  color: rgb(100, 100, 100);
+  font-size: 0.85em;
+  text-align: center;
+}
+.hubLink a {
+  cursor: pointer;
+  display: block;
+  width: 65px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.hubLink a img {
+  width: 100%;
+  display: block;
+}
+.hubLinks {
+  list-style: none;
+}
+.hubLinks li a {
+  display: block;
+  padding: 0.25em;
+  text-decoration: none;
+}
+
+//  This makes the middle line dissapear
+.navMenu.navOpen .navMenu__btn,
+.navMenu.navOpen .navMenu__btn-top,
+.navMenu.navOpen .navMenu__btn-bottom {
+  background: transparent;
+  box-shadow: none;
+}
+.navMenu.navOpen .navMenu__btn::before {
+  width: 35px;
+  height: 4px;
+  margin-left: 0;
+  background-color: red;
+  transform: rotate(-45deg);
+  border-radius: 25%;
+}
+//  This rotates the bottom line and changes the color
+.navMenu.navOpen .navMenu__btn::after {
+  width: 35px;
+  height: 4px;
+  margin-left: 0;
+  background-color: red;
+  transform: rotate(45deg);
+  border-radius: 25%;
+}
+.navList.navOpen {
+  left: 0;
+}
+
+@media (min-width: 400px) {
+  .hubNav {
+    height: 375px;
+  }
+  .hubLink {
+    width: 90px;
+    height: 90px;
+  }
+  .hubLink a {
+    width: 75px;
+  }
+
+  .navMenu {
+    top: 1em;
+    &__btn {
+      height: 5px;
+      width: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__btn-top {
+      height: 4px;
+      width: 30px;
+    }
+    &__btn-bottom {
+      width: 40px;
+      height: 6px;
+    }
+    &__btn::before {
+      margin-top: 5px;
+      margin-right: 22px;
+      margin-left: 0;
+      height: 2px;
+      min-width: 27px;
+      transform: rotate(-77deg);
+    }
+    &__btn::after {
+      margin-top: 5px;
+      margin-left: 22px;
+      height: 2px;
+      min-width: 27px;
+      transform: rotate(77deg);
+    }
+  }
+  .navMenu.navOpen .navMenu__btn::before {
+    margin-right: 0;
+  }
+  .navMenu.navOpen .navMenu__btn::after {
+    margin-left: 0;
+  }
+  .navList {
+    top: 6.4em;
+  }
+  #darkMode {
+    top: 3em;
+  }
+}
+
+@media (min-width: 600px) {
+  .navMenu {
+    width: 60px;
+    height: 60px;
+    top: 1.25em;
+    left: 1em;
+    &__btn {
+      height: 5px;
+      width: 45px;
+    }
+    &__btn-top {
+      margin-bottom: 4px;
+      height: 4px;
+      width: 35px;
+    }
+    &__btn-bottom {
+      margin-top: 5px;
+      width: 55px;
+      height: 6px;
+    }
+    &__btn::before {
+      content: "";
+      display: block;
+      margin-top: 5px;
+      margin-right: 30px;
+      height: 3px;
+      min-width: 35px;
+      transform: rotate(-70deg);
+      z-index: 5;
+    }
+    &__btn::after {
+      content: "";
+      display: block;
+      margin-top: 5px;
+      margin-left: 30px;
+      height: 3px;
+      min-width: 35px;
+      transform: rotate(70deg);
+      z-index: 5;
+    }
+  }
+  .navMenu.navOpen .navMenu__btn::before {
+    width: 50px;
+    height: 6px;
+    margin-right: 0;
+  }
+  .navMenu.navOpen .navMenu__btn::after {
+    width: 50px;
+    height: 6px;
+    margin-left: 0;
+  }
+  
+  .hubNav {
+    margin: 3em auto;
+  }
+  .navList {
+    top: 7.9em;
+  }
+  #darkMode {
+    top: 4.25em;
+  }
+}
+
+@media (min-width: 700px) {
+  .navMenu {
+    top: 1.5em;
+    left: 1.25em;
+    &__btn {
+      height: 6px;
+      width: 50px;
+    }
+    &__btn-top {
+      margin-bottom: 5px;
+      height: 5px;
+      width: 40px;
+    }
+    &__btn-bottom {
+      margin-top: 6px;
+      width: 60px;
+      height: 7px;
+    }
+    &__btn::after,
+    &__btn:before {
+      min-width: 40px;
+    }
+    &__btn:before {
+      transform: rotate(-75deg);
+      margin-right: 35px;
+    }
+    &__btn:after {
+      transform: rotate(75deg);
+      margin-left: 37px;
+    }
+  }
+  .navList {
+    top: 9.2em;
+  }
+  #darkMode {
+    top: 5.25em;
+  }
+  .logoBrand {
+    letter-spacing: 3px;
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navMenu {
+    top: 2em;
+    left: 3em;
+    &__btn {
+      height: 6px;
+      width: 65px;
+    }
+    &__btn-top {
+      margin-bottom: 5px;
+      height: 5px;
+      width: 55px;
+    }
+    &__btn-bottom {
+      margin-top: 6px;
+      width: 75px;
+      height: 8px;
+    }
+    &__btn::after,
+    &__btn:before {
+      min-width: 40px;
+      height: 4px;
+    }
+    &__btn:before {
+      transform: rotate(-77deg);
+      margin-right: 38px;
+    }
+    &__btn:after {
+      transform: rotate(77deg);
+      margin-left: 42px;
+    }
+  }
+  .navMenu.navOpen .navMenu__btn::before {
+    width: 60px;
+    height: 7px;
+    margin-right: 0;
+  }
+  .navMenu.navOpen .navMenu__btn::after {
+    width: 60px;
+    height: 7px;
+    margin-left: 0;
+  }
+  .navList {
+    top: 6.25em;
+  }
+  #darkMode {
+    top: 7em;
+    right: 5em;
+  }
+}
+@media (min-width: 1200px) {
+  .navList {
+    top: 7.15em;
+  }
+  #darkMode {
+    top: 8em;
+  }
+}

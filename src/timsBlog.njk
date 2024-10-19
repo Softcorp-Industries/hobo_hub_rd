@@ -1,0 +1,24 @@
+---
+  title: Tin Can Tim
+  layout: "base.njk"
+  montra: Tim's Mission
+---
+
+<section class="welcome">
+  <p class="lead">
+    Hello, I'm Tim.
+  </p>
+  <p>
+    We have a few posts here to choose from. We can offer you some suggestions for employment postings, income supports and apprenticeship training.
+  </p>
+</section>
+
+<section class="chapter">
+  <ul>
+    {%- for post in collections.timspost | reverse -%}
+
+    {% include "blog-snippet.njk" %}
+
+    {%- endfor -%}
+  </ul>
+</section>

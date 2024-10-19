@@ -1,0 +1,28 @@
+---
+  title: Duey Cheatem & Howe
+  layout: "base.njk"
+  montra: DCH's Mission
+---
+
+<section class="welcome">
+  <p class="lead">
+    Saul has nothing on us...
+  </p>
+  <p>
+    We don't offer any Legal advice here. We can however point you in the right direction to get the Professional help you need.
+  </p>
+  <p>
+    Do you know where the Court House is? Do you have a Lawyer, do you need one? Are you needing to find filed Legal documents?
+  </p>
+  <p>
+    Scroll through my post to see if someone can help you.
+  </p>
+</section>
+
+<section class="chapter">
+  <ul>
+    {%- for post in collections.dchspost | reverse -%}
+      {% include "blog-snippet.njk" %}
+    {%- endfor -%}
+  </ul>
+</section>

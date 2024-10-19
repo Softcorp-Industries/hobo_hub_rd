@@ -1,0 +1,31 @@
+---
+  title: Dr. Feelgood
+  layout: "base.njk"
+  montra: The Feelgood Mission
+---
+
+<section class="welcome">
+  <p class="lead">
+    What seems to be the problem?
+  </p>
+  <p>
+    Do you need emergency health care, long term health concerns or a Family Dr.
+  </p>
+  <p>
+    Maybe we can help you find the people to help.
+  </p>
+  <p>
+    Are you needing a meeting? We have posts for most of the 12 step meetings in the city. There are other organizations that can help as well.
+  </p>
+  <p>
+    Scroll through my post to see if there is someone that can help you.
+  </p>
+</section>
+
+<section class="chapter">
+  <ul>
+    {%- for post in collections.drspost | reverse -%}
+      {% include "blog-snippet.njk" %}
+    {%- endfor -%}
+  </ul>
+</section>

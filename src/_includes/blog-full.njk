@@ -1,0 +1,24 @@
+---
+layout: "hub-base.njk"
+---
+
+<article class="post">
+
+  <div class="blogHeader">
+    <div class="blogHeader__title">
+      <p>Freight Train Freddie's</p>
+      <p>HOBO HUB</p>
+    </div>
+    <p>Blog Review by {{author}}</p>
+  </div>
+
+  <figure class="post__image">
+    <img src="{{ image }}">
+    <figcaption class="post__image__caption">
+      {{ figcaption }}
+    </figcaption>
+  </figure>
+  
+  {{ content | safe }}
+  
+</article>

@@ -1,0 +1,53 @@
+---
+title: Red Deer
+layout: 'base.njk'
+---
+
+<section class="hubNav">
+  <h2 class="logoBrand">HOBO HUB</h2>
+  {% include "hubLinks.njk" %}
+</section>
+
+<section class="quickLinks">
+  <div class="quickLink quickLeft dailyLink">
+    <h3 class="quickLink__header">Daily Meals</h3>
+    <ul>
+      {%- for DailyMeals in collections.DailyMeals | reverse  -%}
+        {% include "meal-snippet.njk" %}
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="quickLink quickRight emergencyLink">
+    <h3 class="quickLink__header">Emergency #'s</h3>
+    <ul>
+      <li><a href="tel:403-998-7388">DOAP Team</a></li>
+      <li><a href="tel:403-266-4357">Distress Line 24 hrs</a></li>
+      <li><a href="tel:403-264-8336">Youth ConnecTeen 24 hrs</a></li>
+      <li><a href="tel:403-299-9699">Woods Home Youth Crisis</a></li>
+      <li><a href="tel:403-266-0707">YWCA Crisis line 24 hrs</a></li>
+      <li><a href="tel:403-705-3250">Elder Abuse Resource Line</a></li>
+      <li><a href="tel:211">Alberta Help Lines 211</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="welcome">
+    <p class="lead">
+      Check out the <span>HOBO HUB</span>...
+    </p>
+    <p>
+      The <span>HOBO Hub</span> is a community for sharing information on services to the homeless, low-income and needy.
+    </p>
+    <p>
+      We have 6 NPC Guides to help you find the resources you need, We don't offer any direct services ourselves, we are but only humble guides in your journey. You can connect to them directly by clicking on the assocciated icon within the <span>HOBO HUB</span> above or continue to their bio section below for more information.
+    </p>
+</section>
+
+<section class="chapter">
+  <h2 class="chapterHeader">NPC Guides</h2>
+  <section class="hubSections">
+  {%- for mission in collections.mission -%}
+    {% include "hub-snippet.njk" %}
+  {%- endfor -%}
+</section>

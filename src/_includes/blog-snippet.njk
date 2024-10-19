@@ -1,0 +1,15 @@
+<!-- The article-snippet is the short version of the article that also contains the continue reading button -->
+
+<li class="snippet">
+  <div class="snippet__header">
+    <article>
+      <h3 class="snippet__title"> {{ post.data.title }}</h3>
+      <p class="snippet__meta">by <span>{{  post.data.author }}</span> {{ post.date | postDate}}</p>
+    </article>
+    <img src="{{ post.data.snippeticon }}" alt="{{ post.data.snippeticonAlt }}" class="snippet__image">
+  </div>
+  <article>
+    <p class="snippet__body">{{ post.data.description }}</p>
+    <a href="{{ post.url }}" class="hubBtn">Continue Reading</a>
+  </article>
+</li>

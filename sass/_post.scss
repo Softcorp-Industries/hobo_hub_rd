@@ -1,0 +1,233 @@
+.post-header {
+  min-height: 6em;
+  padding: 0.5em 0;
+  backdrop-filter: blur(0.5em);
+  background-color: var(--darkModeHeader);
+  box-shadow: 0 0 4px 1px black;
+  h1 {
+    width: 75%;
+    margin: auto;
+    color: var(--darkModeTxt);
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  #righticon,
+  #lefticon {
+    position: absolute;
+    width: 40px;
+    top: 1.5em;
+  }
+  #lefticon {
+    left: 1em;
+  }
+  #righticon {
+    right: 1em;
+  }
+}
+.post {
+  letter-spacing: 1px;
+  .blogHeader {
+    margin: auto;
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 1.5em;
+    p {
+      font-size: .85em;
+    }
+    p:nth-child(3) {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 1.15em;
+    }
+    &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p:first-child {
+        width: 100%;
+        font-family: "The Nautigal";
+        font-size: 2.5em;
+        color: steelblue;
+        margin: 0px auto;
+      }
+      p:nth-child(2) {
+        width: 100%;
+        font-family: "Titan One";
+        font-size: 1.5em;
+        color: red;
+        letter-spacing: 2px;
+        margin: 0px auto;
+      }
+    }
+  }
+  a {
+    color: steelblue;
+  }
+  blockquote {
+    margin: 2em auto;
+    width: 95%;
+    max-width: 750px;
+    padding: 1em;
+    background-color: var(--darkModeBg2);
+    border-radius: 0.5em;
+    border: 2px solid rgb(155, 155, 155);
+  }
+  ul{
+    li{
+      margin-left: 1em;
+    }
+  }
+  &__image {
+    margin: auto;
+    max-width: 700px;
+    margin-bottom: 2em;
+    img {
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      min-height: 150px;
+      max-height: 500px;
+      backdrop-filter: blur(0.5em);
+      border-radius: 0.5em;
+      box-shadow: 0 3px 5px 0 black;
+      margin-bottom: 0.5em;
+    }
+    &__caption {
+      text-align: center;
+      font-size: 0.9em;
+    }
+  }
+  p {
+    margin: 0.5em 0;
+  }
+  &__lead {
+    font-size: 1.25em;
+  }
+  .subHeader {
+    display: block;
+    padding-top: 1em;
+    font-weight: 700;
+    font-size: 1.75em;
+    color: steelblue;
+    margin-bottom: .25em;
+  }
+  &__link {
+    margin: 2em auto;
+    padding: 1em;
+    max-width: 550px;
+    min-height: 200px;
+    text-align: center;
+    background-color: var(--darkModeBg2);
+    backdrop-filter: blur(0.5em);
+    box-shadow: inset -3px -3px 5px rgba(60, 60, 60, 0.6),
+    inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 0.5em;
+    img {
+      margin: 1em auto;
+      display: block;
+      width: 80%;
+      max-width: 300px;
+    }
+    p {
+      font-size: 0.9em;
+    }
+    a {
+      display: block;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      text-align: center;
+      color: steelblue;
+    }
+  }
+  .atten {
+    color: red;
+    margin: 1em 0;
+  }
+}
+
+
+@media (min-width: 400px) {
+  .post-header {
+    h1 {
+      font-size: 1.2em;
+    }
+  }
+}
+@media (min-width: 600px) {
+  .post-header {
+    h1 {
+      font-size: 2em;
+    }
+    #righticon,
+    #lefticon {
+      width: 50px;
+    }
+  }
+  .post {
+    .blogHeader {
+      &__title {
+        flex-direction: row;
+        justify-content: center;
+        p:first-child {
+          font-size: 2.25em;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  .post-header {
+    #righticon,
+    #lefticon {
+      width: 60px;
+    }
+    #lefticon {
+      left: 2em;
+    }
+    #righticon {
+      right: 2em;
+    }
+  }
+  .post {
+    .blogHeader {
+      margin-bottom: 2.5em;
+      &__title {
+        p:first-child {
+          font-size: 2.5em;
+        }
+        p:nth-child(2) {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .post-header {
+    h1 {
+      font-size: 2.5em;
+    }
+    #lefticon {
+      top: .5em;
+      left: 3em;
+      width: 75px;
+    }
+    #righticon {
+      display: none;
+    }
+  }
+  .post {
+    .blogHeader {
+      &__title {
+        p:first-child {
+          font-size: 3.5em;
+        }
+        p:nth-child(2) {
+          font-size: 2.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<header class="page-header">
+
+  <div class="navMenu">
+    <div class="navMenu__btn-top"></div>
+    <div class="navMenu__btn"></div>
+    <div class="navMenu__btn-bottom"></div>
+  </div>
+
+  <nav class="navList">
+    <ul>
+      <li><a href="/">The <span>HOBO HUB</span></a></li>
+      <li>
+        <div>
+          {%- for mission in collections.freddiesmission -%}
+            {% include "missionLink.njk" %}
+          {%- endfor -%}
+        </div>
+      </li>
+      <li><a href="/larrysBlog" title="Lunch Box Larry">FOOD</a></li>
+      <li><a href="/sallysBlog" title="Shopping Cart Sally">CLOTHING</a></li>
+      <li><a href="/tinasBlog" title="Tent City Tina">SHELTER</a></li>
+      <li><a href="/timsBlog" title="Tin Can Tim">EMPLOYMENT</a></li>
+      <li><a href="/feelgoodBlog" title="Dr. Feelgood">HEALTH</a></li>
+      <li><a href="/dchBlog" title="Duey, Cheatem & Howe">LEGAL</a></li>
+      <li>
+        <div>
+          {%- for mission in collections.contact -%}
+            {% include "missionLink.njk" %}
+          {%- endfor -%}
+      </li>
+    </ul>
+  </nav>
+  <div id="darkMode">
+    <div class="darkMode">
+      <span id="darkMode-btn" class="darkMode__btn"></span>
+    </div>
+    <p>Dark Mode</p>
+  </div>
+
+  <h1>{{ title }}</h1>
+
+  <div id="google_translate_element"></div>
+
+</header>

@@ -1,0 +1,23 @@
+---
+  title: Shopping Cart Sally
+  layout: "base.njk"
+  montra: Sally's Mission
+---
+
+<section class="welcome">
+  <p class="lead">Hello Sweetie, my name is Sally.</p>
+  <p>
+     Are you looking for something to keep you warm, I got ya Babe!!! I know a few people that can help you out. Do you need any furniture or a ride somewhere Honey? I can try to get you connected to some great services to get you out there.
+  </p>
+  <p>
+    Scroll through my posts to see if anything catches your eye.
+  </p>
+</section>
+
+<section class="chapter">
+  <ul>
+    {%- for post in collections.sallyspost | reverse -%}
+      {% include "blog-snippet.njk" %}
+    {%- endfor -%}
+  </ul>
+</section>

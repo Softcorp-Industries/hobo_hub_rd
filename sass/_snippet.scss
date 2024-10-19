@@ -1,0 +1,190 @@
+.snippet {
+  position: relative;
+  margin: 2em auto;
+  max-width: 700px;
+  padding: 0.75em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--darkModeHeader);
+  backdrop-filter: blur(0.5em);
+  box-shadow: inset -3px -3px 5px rgba(60, 60, 60, 0.6),
+    inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  border-radius: 0.5em;
+  
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  &__header article {
+    width: 75%;
+  }
+  &__meta {
+    font-size: 0.7em;
+  }
+  &__body {
+    margin-bottom: 1.25em;
+    font-size: 0.9em;
+  }
+  img {
+    display: block;
+    width: 35px;
+    height: 35px;
+  }
+  article a {
+    display: block;
+    width: 50%;
+  }
+}
+.missionStatement p {
+  color: red;
+}
+.hub-snippet {
+  backdrop-filter: blur(0.5em);
+  background-color: var(--darkModeHeader);
+  box-shadow: inset -3px -3px 5px rgba(60, 60, 60, 0.6),
+    inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  margin: 2em auto;
+  width: 100%;
+  max-width: 750px;
+  border-radius: 0.5em;
+  margin-bottom: 4em;
+  &__header {
+    padding: 0.75em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__header h2 {
+    padding: 0 0.25em;
+    letter-spacing: 1px;
+    font-family: "The Nautigal";
+    font-size: 2.25em;
+    color: steelblue;
+  }
+  &__header img {
+    width: 40px;
+  }
+  &__header img:first-of-type {
+    display: none;
+  }
+  &__body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: space-between;
+    text-align: center;
+    .lead {
+      margin: 0.25em 0;
+      font-size: 1.25em;
+    }
+    .highlights {
+      margin: 1em auto;
+      width: 90%;
+      text-align: left;
+      letter-spacing: 1px;
+      font-size: 0.9em;
+    }
+  }
+}
+.hubBtns {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.hubBtn {
+  margin: 2.5em auto;
+  padding: 0.5em;
+  width: 50%;
+  min-width: 200px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 0.85em;
+  color: white;
+  border-radius: 0.5em;
+  background-color: steelblue;
+  margin-bottom: 2em;
+}
+.hubBtn:hover {
+  background-color: blue;
+}
+
+@media (min-width: 400px) {
+  .snippet {
+    padding: 1em;
+  }
+}
+@media (min-width: 600px) {
+  .snippet {
+    width: 90%;
+  }
+  .hubBtn {
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+  .hub-snippet {
+    &__header {
+      justify-content: space-evenly;
+    }
+    &__header h2 {
+      font-size: 3em;
+    }
+    &__header img {
+      width: 55px;
+    }
+    &__header img:first-of-type {
+      display: block;
+    }
+    &__body {
+      .lead {
+        font-size: 1.4em;
+      }
+      .highlights {
+        font-size: 1em;
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  .snippet {
+    margin: 3em auto;
+    padding: 1.25em;
+    &__header {
+      margin-bottom: 1.5em;
+    }
+    &__title {
+      font-size: 1.5em;
+      margin-bottom: 0.25em;
+    }
+    &__body {
+      margin-bottom: 2em;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .hub-snippet {
+  margin-bottom: 5em;
+  }
+}
+@media (min-width: 1000px) {
+  .snippet {
+    margin: 5em auto;
+  }
+}
+@media (min-width: 1200px) {
+  .hub-snippet {
+    max-width: 700px;
+  margin-bottom: 6.5em;
+  }
+}
