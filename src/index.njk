@@ -1,5 +1,5 @@
 ---
-title: Red Deer
+title: Red Deer Ricky
 layout: 'base.njk'
 ---
 
@@ -10,7 +10,8 @@ layout: 'base.njk'
 
 <section class="quickLinks">
   <div class="quickLink quickLeft dailyLink">
-    <h3 class="quickLink__header">Daily Meals</h3>
+    <p>Check the Menu</p>
+    <h3 class="quickLink__header">"Over There"</h3>
     <ul>
       {%- for DailyMeals in collections.DailyMeals | reverse  -%}
         {% include "meal-snippet.njk" %}
@@ -20,11 +21,10 @@ layout: 'base.njk'
   <div class="quickLink quickRight emergencyLink">
     <h3 class="quickLink__header">Emergency #'s</h3>
     <ul>
-      <li><a href="tel:403-998-7388">DOAP Team</a></li>
-      <li><a href="tel:403-266-4357">Distress Line 24 hrs</a></li>
-      <li><a href="tel:403-264-8336">Youth ConnecTeen 24 hrs</a></li>
-      <li><a href="tel:403-299-9699">Woods Home Youth Crisis</a></li>
-      <li><a href="tel:403-266-0707">YWCA Crisis line 24 hrs</a></li>
+      <li><a href="tel:403-347-0181">Detox</a></li>
+      <li><a href="tel:403-340-5466">Mental Health</a></li>
+      <li><a href="tel:403-341-3190">49 St. Youth Shelter</a></li>
+      <li><a href="tel:403-346-5643">Women's Emergency Shelter</a></li>
       <li><a href="tel:403-705-3250">Elder Abuse Resource Line</a></li>
       <li><a href="tel:211">Alberta Help Lines 211</a></li>
     </ul>

@@ -8,32 +8,61 @@ snippeticon: /assets/icons/icons8-hamper-48.png
 
 <br>
 
-<p class="post__lead">The Alex - Community Food Center</p>
+<p>
+Breakfast:
+</p>
+<p class="post__lead">
+Potter's Hands
+</p>
 
-4920 17ave SE | Calgary, AB
+7:00am - 8:15am
 
-<br>
-
-Drop-In Community Lunch:
-
-Nutritious Lunch | 12:00pm - 1:00pm
-
-<br>
-
-Drop-In and join us for a free, nutritious lunch. Adults and supervised children are welcome. 
+4935 51 St | Red Deer, AB
 
 <br>
 <hr>
 <br>
 
-<p class="post__lead">Mustard Seed - Downtown Neighbour Center</p>
+<p>
+Lunch:
+</p>
 
-102 11 Ave SE | Calgary, AB
+<p class="post__lead">
+The Street Church
+</p>
+
+11:30am - 1:00pm
+
+ | Red Deer, AB
 
 <br>
 
-Street Level:
+<p class="post__lead">
+The Mustard Seed
+</p>
 
-Hot Lunches | 12:00pm | Time and availability subject to change
+Drop-in
 
-Bag Lunches | While supplies last
+1:00pm - 4:00pm
+
+6002 54 Ave. | Red Deer, AB
+
+<br>
+<hr>
+<br>
+
+<p>
+Supper:
+</p>
+
+<p class="post__lead">
+The Mustard Seed
+</p>
+
+5:00pm - 6:15pm
+
+6002 54 Ave. | Red Deer, AB
+
+<br>
+<hr>
+<br>

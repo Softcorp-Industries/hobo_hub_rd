@@ -8,17 +8,62 @@ snippeticon: /assets/icons/icons8-hamper-48.png
 
 <br>
 
-<p class="post__lead">Mustard Seed - Downtown Neighbour Center</p>
+<p>
+Breakfast:
+</p>
+<p class="post__lead">
+Potter's Hands
+</p>
 
-102 11 Ave SE | Calgary, AB
+7:00am - 8:15am
+
+4935 51 St | Red Deer, AB
 
 <br>
 
-Street Level:
+<p class="post__lead">
+The Mustard Seed
+</p>
 
-Hot Lunches | 12:00pm | Time and availability subject to change
+Drop-in
 
-Bag Lunches | While supplies last
+9:00am - 3:00pm
+
+6002 54 Ave. | Red Deer, AB
+
+<br>
+<hr>
+<br>
+
+<p>
+Lunch:
+</p>
+
+<p class="post__lead">
+The Mustard Seed
+</p>
+
+Drop-in
+
+9:00am - 3:00pm
+
+6002 54 Ave. | Red Deer, AB
+
+<br>
+<hr>
+<br>
+
+<p>
+Supper:
+</p>
+
+<p class="post__lead">
+Potter's Hands
+</p>
+
+4:30pm - 5:30pm
+
+4935 51 St. | Red Deer, AB
 
 <br>
 <hr>

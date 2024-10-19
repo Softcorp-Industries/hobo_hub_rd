@@ -7,7 +7,7 @@
   h1 {
     width: 75%;
     margin: auto;
-    color: var(--darkModeTxt);
+    color: var(--primaryClr);
     font-size: 1em;
     text-align: center;
     letter-spacing: 2px;
@@ -26,6 +26,7 @@
   }
 }
 .post {
+  padding: 1em;
   letter-spacing: 1px;
   .blogHeader {
     margin: auto;
@@ -48,7 +49,7 @@
         width: 100%;
         font-family: "The Nautigal";
         font-size: 2.5em;
-        color: steelblue;
+        color: var(--primaryClr);
         margin: 0px auto;
       }
       p:nth-child(2) {
@@ -62,7 +63,7 @@
     }
   }
   a {
-    color: steelblue;
+    color: var(--primaryClr);
   }
   blockquote {
     margin: 2em auto;
@@ -86,7 +87,7 @@
       display: block;
       margin: auto;
       max-width: 100%;
-      min-height: 150px;
+      
       max-height: 500px;
       backdrop-filter: blur(0.5em);
       border-radius: 0.5em;
@@ -103,13 +104,15 @@
   }
   &__lead {
     font-size: 1.25em;
+    color: var(--primaryClr);
+    font-weight: 700;
   }
   .subHeader {
     display: block;
     padding-top: 1em;
     font-weight: 700;
     font-size: 1.75em;
-    color: steelblue;
+    color: var(--primaryClr);
     margin-bottom: .25em;
   }
   &__link {
@@ -138,7 +141,7 @@
       font-size: 1.5em;
       letter-spacing: 1px;
       text-align: center;
-      color: steelblue;
+      color: var(--primaryClr);
     }
   }
   .atten {
