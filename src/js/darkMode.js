@@ -3,7 +3,7 @@
 const darkModeBtn = document.getElementById("darkMode-btn");
 const darkModeBg = document.getElementById('darkModeBg');
 
-let darkModeSt = localStorage.getItem("darkModeSt");
+let darkModeSt2 = localStorage.getItem("darkModeSt2");
 
 let darkModeOn = false;
 
@@ -15,7 +15,7 @@ const enableDarkMode = () => {
   darkModeBtn.parentElement.nextElementSibling.innerHTML = "Light Mode";
   darkModeBg.style.backgroundImage = "none";
   darkModeBg.classList.add("darkModeBg");
-  localStorage.setItem("darkModeSt", "enabled");
+  localStorage.setItem("darkModeSt2", "enabled");
 };
 
 const disableDarkMode = () => {
@@ -26,18 +26,18 @@ const disableDarkMode = () => {
   darkModeBtn.parentElement.nextElementSibling.innerHTML = "Dark Mode";
   darkModeBg.style.backgroundImage = "url(/assets/blogImages/clouds_72634.jpg)"
   darkModeBg.classList.remove("darkModeBg");
-  localStorage.setItem("darkModeSt", "disabled");
+  localStorage.setItem("darkModeSt2", "disabled");
 };
 
-if (darkModeSt === "enabled") {
+if (darkModeSt2 === "enabled") {
   enableDarkMode();
 }
 
 function darkModeActive() {
   document.addEventListener("DOMContentLoaded", () => {
     darkModeBtn.addEventListener("click", () => {
-      darkModeSt = localStorage.getItem("darkModeSt");
-      if (darkModeSt !== "enabled" && !darkModeOn) {
+      darkModeSt2 = localStorage.getItem("darkModeSt2");
+      if (darkModeSt2 !== "enabled" && !darkModeOn) {
 
         enableDarkMode();
         trans();

@@ -6,10 +6,62 @@
   box-sizing: border-box;
 }
 
-main {
-  padding: 1em;
+body.transition,
+body.transition *,
+body.transition *:before,
+body.transition *:after {
+  transition: all 750ms;
 }
 
+body {
+  font-family: "Roboto";
+  font-weight: 900;
+  background-image: url("/assets/blogImages/clouds_72634.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 750ms;
+}
+
+.darkModeBg {
+  transition: all 750ms;
+  background-color: var(--darkModeBg);
+}
+
+body[data-darkMode=darkMode] {
+  --darkModeTxt: rgb(255, 255, 255);
+  --darkModeBg2: rgb(40, 40, 40);
+  --darkModeHeader: rgb(40, 40, 40);
+}
+
+main {
+  margin: auto;
+  padding: 1em;
+  color: var(--darkModeTxt);
+  min-height: 100vh;
+  max-width: 1000px;
+}
+
+footer {
+  width: 100%;
+  -webkit-backdrop-filter: blur(0.5em);
+          backdrop-filter: blur(0.5em);
+  color: var(--darkModeTxt);
+  background-color: var(--darkModeHeader);
+  box-shadow: 0 0 3px 1px rgb(90, 90, 90);
+}
+
+footer p {
+  padding: 1em 0;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 18px;
+  }
+}
 .snippet {
   position: relative;
   margin: 2em auto;
